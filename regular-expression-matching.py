@@ -9,6 +9,7 @@ class Solution:
                     if pair[1][0] == '.' or pair[0][0:1] == pair[1][0:1]:
                         new_one = [pair[0][1:], pair[1]]
                         if '|'.join(new_one) not in {'|'.join(each) for each in new_pairs}:
+                                                                             # check if pattern not in the list
                             new_pairs.append([pair[0][1:], pair[1]])         # add pattern where * match at least once
                 elif pair[1][0] == '.' or pair[0][0] == pair[1][0]:
                     new_pairs.append([pair[0][1:], pair[1][1:]])             # delete one element if matching
